@@ -5,6 +5,7 @@ body {
     padding: 0;
     background-color: #f4f4f4;
 }
+
 /* Centered navigation bar */
 .navbar {
     display: flex;
@@ -12,6 +13,7 @@ body {
     background-color: #51dbbf;
     padding: 10px 0;
 }
+
 /* Style for navigation links */
 .navbar a, .dropdown .dropbtn {
     display: block;
@@ -24,15 +26,19 @@ body {
     width: 120px;  /* You can adjust the width of each block */
     box-sizing: border-box;
 }
+
+/* Hover effect for navigation links */
 .navbar a:hover, .dropdown:hover .dropbtn {
     background-color: #FA41D5;
     color: black;
 }
+
 /* Dropdown container */
 .dropdown {
     position: relative;
     display: inline-block;
 }
+
 /* Dropdown content (hidden by default) */
 .dropdown-content {
     display: none;
@@ -40,15 +46,14 @@ body {
     top: 100%;
     left: 0;
     background-color: #f9f9f9;
-    min-width: 100%;
+    min-width: 120px; /* Adjust to match the width of the dropdown button */
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    display: flex;
-    justify-content: center;
+    flex-direction: column;
 }
+
 /* Dropdown content links */
 .dropdown-content a {
-    float: none;
     color: black;
     padding: 12px 16px;
     text-decoration: none;
@@ -56,12 +61,20 @@ body {
     text-align: center;
     background-color: #FA41D5;
     border: 1px solid #ddd;
-    margin-right: 5px;
 }
+
+/* Hover effect for dropdown content links */
 .dropdown-content a:hover {
     background-color: #ddd;
 }
+
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
-    display: flex;
+    display: block;  /* Make dropdown visible when hovering over parent */
+}
+
+/* Optional: Center the dropdown content if it's part of a flexbox navbar */
+.dropdown-content a {
+    width: 100%; /* Ensure the dropdown items stretch to full width */
+    box-sizing: border-box;
 }
