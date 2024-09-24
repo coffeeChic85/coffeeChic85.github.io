@@ -13,10 +13,10 @@
 body {
   margin: 40px;
   font-family: 'GowunBatang', 'Open Sans', 'sans-serif';
-  background-color: #fff;
+  background: url('wineouting.jpg') no-repeat center center fixed; /* Add background image */
+  background-size: cover; /* Make sure the image covers the entire background */
   color: #444;
 }
-
 h1, p {
   margin: 0 0 1em 0;
 }
