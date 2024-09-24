@@ -1,3 +1,9 @@
+/* Custom font definition */
+@font-face {
+  font-family: 'GowunBatang';
+  src: url('gowunbatang_regular.ttf');
+}
+
 /* Box-sizing reset */
 *, *:before, *:after {
   box-sizing: border-box;
@@ -6,7 +12,7 @@
 /* Body and text styling */
 body {
   margin: 40px;
-  font-family: 'Open Sans', 'sans-serif';
+  font-family: 'GowunBatang', 'Open Sans', 'sans-serif';
   background-color: #fff;
   color: #444;
 }
@@ -15,9 +21,20 @@ h1, p {
   margin: 0 0 1em 0;
 }
 
-/* h1 header color */
+/* h1 header color - ensure it's applied correctly */
 h1 {
-  color: #FA41D5;
+  color: #FA41D5; /* Pink color */
+  font: 'gownbatang_regular.ttf';
+}
+h2{
+  color:#51dbbf
+
+}
+
+/* Paragraph indentation */
+p {
+  text-indent: 20px; /* Add indentation to all paragraphs */
+  font-family: 'GowunBatang','Open Sans','sans-serif'
 }
 
 /* Main wrapper */
@@ -28,26 +45,38 @@ h1 {
   grid-gap: 10px;
 }
 
+/* Footer styling */
+.footer {
+  background-color: #51dbbf; /* Footer background color */
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center; /* Center the text */
+  display: flex; /* Enables Flexbox */
+  justify-content: center; /* Centers items horizontally */
+  gap: 20px; /* Optional: space between footer elements */
+}
+
 /* Responsive layout for wider screens */
 @media screen and (min-width: 500px) {
   .sidebar {
-      float: left;
-      width: 19.1489%;
+    float: left;
+    width: 19.1489%;
   }
 
   .content {
-      float: right;
-      width: 79.7872%;
+    float: right;
+    width: 79.7872%;
   }
 
   .wrapper {
-      margin: 0 auto;
-      grid-template-columns: 1fr 3fr;
+    margin: 0 auto;
+    grid-template-columns: 1fr 3fr;
   }
 
   .header, .footer {
-      grid-column: 1 / -1;
-      clear: both;
+    grid-column: 1 / -1;
+    clear: both;
   }
 }
 
@@ -64,10 +93,49 @@ h1 {
 /* Grid support: resetting widths for grid-based layout */
 @supports (display: grid) {
   .wrapper > * {
-      width: auto;
-      margin: 0;
+    width: auto;
+    margin: 0;
   }
+/* Media Print Query */
+@media print {
+  /* General styles for printing */
+  body {
+      margin: 0; /* Remove margins for print */
+      color: black; /* Ensure text is black */
+      background-color: white; /* Background should be white */
+  }
+
+  h1, h2 {
+      color: black; /* Change header colors for printing */
+      page-break-after: avoid; /* Prevent breaking after headings */
+  }
+
+  .navbar {
+      display: none; /* Hide navbar and footer during print */
+  }
+
+  /* Indent paragraphs */
+  p {
+      text-indent: 0; /* Remove indentation for print */
+  }
+
+  /* Ensure links are readable */
+  a {
+      color: blue; /* Change link color to blue for printing */
+      text-decoration: underline; /* Underline links */
+  }
+
+  /* Additional styles for printing can be added here */
 }
+
+
+
+
+
+
+
+
+
 
 
 
