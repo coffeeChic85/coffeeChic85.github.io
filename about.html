@@ -17,10 +17,11 @@
             align-items: center;
             justify-content: flex-start;
             padding: 20px;
+            text-align: center;
                /* Footer styling with Flexbox and Background Image */
 
         .footer img {
-            margin-right: 10px; /* Space between the icon and the text */
+            margin-center: 10px; /* Space between the icon and the text */
         }
 
         .footer a {
@@ -86,6 +87,36 @@
         <img width="45" height="45" src="https://img.icons8.com/bubbles/100/new-post.png" alt="Email Icon"/>
         <p>Email: <a href="mailto:slc97b@umsystem.edu">slc97b@umsystem.edu</a></p>
     </footer>
+        <!-- Style block to include hover animation -->
+        <style>
+            /* Footer styling with Flexbox */
+            .footer {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                padding: 20px;
+            }
+    
+            .footer img {
+                margin-right: 10px; /* Space between the icon and the text */
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+    
+            .footer img:hover {
+                transform: scale(1.5); /* Scale the icon by 50% */
+                box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3); /* Add a stronger shadow */
+            }
+    
+            .footer a {
+                color: inherit; /* Keeps the link color the same as the surrounding text */
+                text-decoration: none;
+            }
+    
+            .footer p {
+                margin: 0 20px 0 0; /* Adds space between the two pieces of contact info */
+            }
+        </style>
+    
 </div>
 </body>
 </html>
