@@ -33,6 +33,25 @@
             margin: 0 20px 0 0; /* Adds space between the two pieces of contact info */
         }
     </style>
+    <style>
+        /* Basic styles for the gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px; /* Optional: rounded corners */
+            transition: transform 0.2s; /* Animation effect */
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05); /* Zoom effect on hover */
+        }
+    </style>
 
 </head>
 <body>
@@ -79,6 +98,11 @@
         <section id="personal">
             <h2>Personal Me</h2>
             <p>When I’m not working, you’ll find me and my husband Wes exploring new corners of the globe—from the cobblestone streets of Europe to the vibrant culture of Cuba and the icy wonders of Iceland. Back at home, I love hiking, birdwatching, watching movies, and getting lost in a gripping murder mystery. And let’s not forget our two dogs, <em>Nate</em> and <em>Pongo</em>, who keep us on our toes with endless games of fetch and walks.</p>
+            <div class="gallery">
+                <img src="images/wine outing.jpg" alt="Wes and I">
+                <img src="images/doggies.jpg" alt="Description of Photo 2">
+                <!-- Add more images as needed -->
+            </div>
         </section>
     </main>
   <!-- Footer Section with Icons to the Left of Contact Info -->
