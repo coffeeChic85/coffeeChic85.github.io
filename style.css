@@ -68,11 +68,77 @@ tr:nth-child(even) td:nth-child(even),
 tr:nth-child(odd) td:nth-child(odd) {
   background-color: #ffffff; /* White */
 }
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: gray;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #51dbbf;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input, textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input:focus, textarea:focus {
+  border-color: #51dbbf; /* Light teal */
+  outline: none;
+}
+
+button {
+  padding: 10px;
+  background-color: #51dbbf; /* Light teal */
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45b1a3; /* Darker teal */
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 600px) {
+  .container {
+      width: 90%; /* Full width on small screens */
+  }
+
+  input, textarea {
+      width: 100%; /* Full width for inputs */
+  }
+}
 
 /* Footer styling */
 .footer {
   background-color: #51dbbf; /* Footer background color */
-  color: black;
+  color: white;
   padding: 5px;
   border-radius: 5px;
   text-align: center; /* Center the text */
