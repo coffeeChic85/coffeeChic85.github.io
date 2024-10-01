@@ -17,7 +17,7 @@ body {
 /* Style for navigation links */
 .navbar a, .dropdown .dropbtn {
     display: block;
-    color: black;
+    color: white;
     text-align: center;
     padding: 16px;
     margin: 0 10px;
