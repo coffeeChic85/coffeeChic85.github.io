@@ -11,6 +11,14 @@
     <link rel="manifest" href="/site.webmanifest">
 
     <style>
+        /* Centering images and videos */
+        img, video {
+            display: block;             /* Ensure that the element is a block-level element */
+            margin: 20px auto;         /* Automatically set left and right margins, add top/bottom margin */
+            max-width: 100%;           /* Responsive resizing */
+            height: auto;              /* Maintain aspect ratio */
+        }
+
         /* Footer styling with Flexbox */
         .footer {
             display: flex;
@@ -33,6 +41,7 @@
         .footer a {
             color: inherit; /* Keeps the link color the same as the surrounding text */
             text-decoration: none;
+            text-align: center;
         }
 
         .footer p {
@@ -120,3 +129,4 @@
     </footer>
 </body>
 </html>
+
